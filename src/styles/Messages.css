@@ -1,0 +1,59 @@
+.messages {
+    background-color: #ddddf7;
+    padding: 10px;
+    height: calc(100% - 160px);
+    overflow: scroll;
+}
+
+.msg {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    /* if its msg but at the same owner */
+    &.owner {
+        flex-direction: row-reverse;
+    
+        .msgContent {
+            align-items: flex-end;
+    
+            p {
+                background-color: #8da4f1;
+                color: white;
+                border-radius: 10px 0px 10px 10px;
+            }
+        }
+    }
+}
+
+.msgInfo {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-weight: 300;
+}
+
+.msgInfo>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.msgContent {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msgContent>p {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 10px;
+    max-width: max-content;
+}
+
+.msgContent>img {
+    width: 50%;
+}
